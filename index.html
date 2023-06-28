@@ -9,7 +9,8 @@
 <body>
     <script>
         function getUrlVariable(variable) {
-            return window.location.href.split("?")[1].split("=")[1].split("#")[0];
+            let chat_id = window.location.href.split("?")[1].split("=")[1].split("#")[0];
+            return chat_id;
         }
         let tg = window.Telegram.WebApp; //получаем объект webapp телеграма 
         var div = document.createElement("div");
