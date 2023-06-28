@@ -7,15 +7,15 @@
 </head>
 <body>
     <script>
-        var urlParams = new URLSearchParams(window.location.href);
-        var myVariable = urlParams.get('chat_id');
+        function getUrlVariable(variable) {
+            let chat_id = window.location.href.split("?")[1].split("=")[1];
+            return chat_id;
+        }
 
         var div = document.createElement("div");
       div.innerHTML =
     '<div class="slideshow-container">\n' +
-        '<p>' + window.location.href + "</p>"+
-    '<p>' + urlParams + "</p>"+
-    '<p>' + myVariable + "</p>"+
+    '<p>' + getUrlVariable("chat_id") + "</p>"+
     '</div>\n';
 document.body.appendChild(div);
     </script>
